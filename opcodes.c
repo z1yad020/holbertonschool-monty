@@ -71,6 +71,7 @@ pop(stack_t **head, size_t line_number)
 {
 	if (!head || !(*head) || !top)
 	{
+		dispose(*head);
 		fprintf(stderr, "L%lu: can't pop an empty stack\n", line_number);
 		exit(EXIT_FAILURE);
 	}

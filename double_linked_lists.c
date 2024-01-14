@@ -3,12 +3,13 @@
 stack_t
 *add_dnodeint_end(stack_t **head, int n)
 {
-	stack_t *newNode, *lastP;
+	stack_t *newNode;
 
 	newNode = malloc(sizeof(stack_t));
 
 	if (!newNode || !head)
 	{
+		dispose(*head);
 		fprintf(stderr, "Error: malloc failed\n");
 		exit(EXIT_FAILURE);
 	}
@@ -24,10 +25,8 @@ stack_t
 		return (newNode);
 	}
 
-	lastP = top;
-
-	lastP->next = newNode;
-	newNode->prev = lastP;
+	top->next = newNode;
+	newNode->prev = top;
 	top = newNode;
 
 	return (newNode);
