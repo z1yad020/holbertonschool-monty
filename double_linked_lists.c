@@ -30,3 +30,28 @@ stack_t
 
 	return (newNode);
 }
+
+/*
+stack_t
+*delete_dnodeint_at_end(stack_t **head)
+{
+	if (!(*head))
+		return (NULL);
+
+	if (top->prev)
+	{
+		top->prev->next = NULL;
+		free(top->prev);
+		top->prev = NULL;
+
+		top = top->prev;
+	}
+	else
+	{
+		*head = NULL;
+		top->next = NULL;
+		top->prev = NULL;
+	}
+
+	return (dlist);
+}*/

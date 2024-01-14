@@ -74,6 +74,16 @@ pop(stack_t **head, size_t line_number)
 		exit(EXIT_FAILURE);
 	}
 
-	top->prev->next = NULL;
-	free(top);
+	if (top->prev)
+	{
+		top = top->prev;
+		free(top->next);
+		top->next = NULL;
+	}
+	else
+	{
+		free(top);
+		top = NULL;
+		*head = NULL;
+	}
 }
