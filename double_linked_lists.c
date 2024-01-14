@@ -9,7 +9,6 @@ stack_t
 
 	if (!newNode || !head)
 	{
-		dispose(*head);
 		fprintf(stderr, "Error: malloc failed\n");
 		exit(EXIT_FAILURE);
 	}

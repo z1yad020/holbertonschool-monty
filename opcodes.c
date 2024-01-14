@@ -28,7 +28,7 @@ push(stack_t **head, size_t line_number)
 
 	if (!tok || !isint(tok))
 	{
-		dispose(*head);
+		dispose(head);
 		fprintf(stderr, "L%lu: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
 	}
@@ -58,7 +58,6 @@ pint(stack_t **head, size_t line_number)
 {
 	if (!head || !(*head) || !top)
 	{
-		dispose(*head);
 		fprintf(stderr, "L%lu: can't pint, stack empty\n", line_number);
 		exit(EXIT_FAILURE);
 	}
@@ -71,7 +70,6 @@ pop(stack_t **head, size_t line_number)
 {
 	if (!head || !(*head) || !top)
 	{
-		dispose(*head);
 		fprintf(stderr, "L%lu: can't pop an empty stack\n", line_number);
 		exit(EXIT_FAILURE);
 	}

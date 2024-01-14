@@ -4,12 +4,15 @@ stack_t
 *top = NULL;
 
 void
-dispose(stack_t *head)
+dispose(stack_t **head)
 {
-	if (head)
+	stack_t *tmp;
+	
+	while (*head != NULL)
 	{
-		dispose(head->next);
-		free(head);
+		tmp = *head;
+		(*head) = (*head)->next;
+		free(tmp);
 	}
 }
 
@@ -48,6 +51,6 @@ main(int ac, char **argv)
 	}
 
 	fclose(fmonty);
-	dispose(head);
+	dispose(&head);
 	return (0);
 }

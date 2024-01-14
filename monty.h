@@ -47,7 +47,7 @@ extern stack_t *top;
 void execvecommand(stack_t **, char *, size_t);
 int isint(char *);
 
-void dispose(stack_t *);
+void dispose(stack_t **);
 void push(stack_t **, size_t);
 void pall(stack_t **, size_t);
 void pint(stack_t **, size_t);

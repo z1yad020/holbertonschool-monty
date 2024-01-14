@@ -30,6 +30,6 @@ execvecommand(stack_t **head, char *fopcode, size_t line_number)
 	}
 
 	fprintf(stderr,	"L%lu: unknown instruction %s\n", line_number, fopcode);
-	dispose(*head);
+	dispose(head);
 	exit(EXIT_FAILURE);
 }
