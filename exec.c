@@ -6,11 +6,9 @@ opcodes[8] = {
 	{"pall", pall},
 	{"pint", pint},
 	{"pop", pop},
-	/*
-	* {"swap", swap},
-	* {"add", add},
-	* {"nope", nope},
-	*/
+	{"swap", swap},
+/*	{"add", add},*/
+/*	{"nop", nop},*/
 	{NULL, NULL}
 };
 

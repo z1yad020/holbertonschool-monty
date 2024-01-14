@@ -87,3 +87,44 @@ pop(stack_t **head, size_t line_number)
 		*head = NULL;
 	}
 }
+
+
+void
+swap(stack_t **head, size_t line_number)
+{
+	stack_t *tmp;
+
+	if (!head || !*head || !top->prev)
+	{
+		fprintf(stderr, "L%lu: can't swap, stack too short\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+
+	if (!top->prev->prev)
+	{
+		tmp = *head;
+
+		*head = (*head)->next;
+		(*head)->prev = NULL;
+		(*head)->next = tmp;
+
+		tmp->prev = *head;
+		tmp->next = NULL;
+
+		top = tmp;
+		return;
+	}
+
+	/* second from back */
+	tmp = top->prev;
+
+	top->prev->prev->next = top;
+	top->next = top->prev;
+	top->prev = tmp->prev;
+
+	tmp->prev = tmp->next;
+	tmp->next = NULL;
+
+	top = tmp;
+}
+
