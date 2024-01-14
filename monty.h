@@ -51,6 +51,7 @@ void dispose(stack_t *);
 void push(stack_t **, size_t);
 void pall(stack_t **, size_t);
 void pint(stack_t **, size_t);
+void pop(stack_t **, size_t);
 
 stack_t *add_dnodeint_end(stack_t **, int);
 

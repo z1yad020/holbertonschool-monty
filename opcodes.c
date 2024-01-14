@@ -64,3 +64,18 @@ pint(stack_t **head, size_t line_number)
 	}
 	printf("%d\n", top->n);
 }
+
+
+void
+pop(stack_t **head, size_t line_number)
+{
+	if (!head || !(*head) || !top)
+	{
+		fprintf(stderr, "L%lu: can't pop an empty stack\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+
+	top = top->prev;
+	free(top->next);
+	top->next = NULL;
+}
