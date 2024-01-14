@@ -4,8 +4,8 @@ instruction_t
 opcodes[8] = {
 	{"push", push},
 	{"pall", pall},
+	{"pint", pint},
 	/*
-	*		{"pint", pint},
 	*		{"pop", pop},
 	*		{"swap", swap},
 	*		{"add", add},
