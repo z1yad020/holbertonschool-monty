@@ -1,2 +1,2 @@
 # holbertonschool-monty
-Monty is awesome!
+Monty is amazing!
