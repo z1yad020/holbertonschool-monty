@@ -8,7 +8,7 @@ opcodes[8] = {
 	{"pop", pop},
 	{"swap", swap},
 	{"add", add},
-/*	{"nop", nop},*/
+	{"nop", nop},
 	{NULL, NULL}
 };
 

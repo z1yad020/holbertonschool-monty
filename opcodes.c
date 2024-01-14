@@ -141,3 +141,11 @@ add(stack_t **head, size_t line_number)
 	top->prev->n += top->n;
 	pop(head, line_number);
 }
+
+
+void
+nop(stack_t **head, size_t line_number)
+{
+	(void) head;
+	(void) line_number;
+}
