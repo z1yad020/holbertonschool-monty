@@ -43,7 +43,7 @@ main(int ac, char **argv)
 		/* empty or space(tab)-only line case  */
 		if (!fopcode)
 			continue;
-		
+
 		execvecommand(&head, fopcode, line_number);
 	}
 

@@ -8,7 +8,7 @@ isint(char *tok)
 
 	if (*tok == '-')
 		tok++;
-	
+
 	while (*tok)
 		if (*tok >= '0' && *tok <= '9')
 			tok++;
@@ -42,7 +42,7 @@ void
 pall(stack_t **head, size_t line_number)
 {
 	const stack_t *node = top;
-	
+
 	(void) head;
 	(void) line_number;
 
