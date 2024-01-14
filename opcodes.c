@@ -128,3 +128,16 @@ swap(stack_t **head, size_t line_number)
 	top = tmp;
 }
 
+
+void
+add(stack_t **head, size_t line_number)
+{
+	if (!head || !*head || !top->prev)
+	{
+		fprintf(stderr, "L%lu: can't add, stack too short\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+
+	top->prev->n += top->n;
+	pop(head, line_number);
+}

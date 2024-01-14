@@ -7,7 +7,7 @@ opcodes[8] = {
 	{"pint", pint},
 	{"pop", pop},
 	{"swap", swap},
-/*	{"add", add},*/
+	{"add", add},
 /*	{"nop", nop},*/
 	{NULL, NULL}
 };
